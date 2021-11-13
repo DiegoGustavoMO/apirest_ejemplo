@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 //con este main estoy indicando que ejecute la aplicacion principal
 
-//con la ayuda del los pluggins usamos statlessW o StatefulW
+//con la ayuda del los pluggins  de visutal studio code usamos statlessW o StatefulW
 //la diferencia entre estos es que en el full podemos sobre escribir
 
 //se crea el primer widget (clase) de la aplicacion
@@ -22,14 +22,12 @@ class MyApp extends StatelessWidget {
     //material tiene ciertos parametros como title,home
     //title define el titulo de la aplicacion
     //home lo que aparece en el inicio de la aplicacion
-    return Container(
-      child: MaterialApp(
-        //Para quitar el banner de debug
-        debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      //Para quitar el banner de debug
+      debugShowCheckedModeBanner: false,
 
-        title: "Clases",
-        home: Inicio(),
-      ),
+      title: "Clases",
+      home: Inicio(),
     );
   }
 }
@@ -45,14 +43,15 @@ class Inicio extends StatefulWidget {
   _InicioState createState() => _InicioState();
 }
 
-//varible para la clase Empresa
+//variable para la clase Empresa
 //nueva instancia de Empresa
 //new es opcional en Dart
 Empresa _facebook = new Empresa("Facebook", "Mark Zuckerberg", 300000);
 
-Empresa _google = new Empresa("Google", "", 800000);
+//nueva instancia para otra empresa en este caso google
+Empresa _google = new Empresa("Google", "Larry Page", 8000000);
 
-//ejemplo de que los widgets son Clases
+//ejemplo de que los widgets  son Clases en este caso usando el Text
 //tambien se puede sin la palabra new
 Text _nombre = new Text(
   "Diego",
@@ -72,7 +71,7 @@ class _InicioState extends State<Inicio> {
           title: const Text("Clases"),
         ),
         //creamos en el body un center con un child que tiene un childrend
-        //para colocar varios textos y llamaos a los parametros de la clase
+        //para colocar varios textos y llamar a los parametros de la clase
         //Empresa
         body: Center(
           child: Column(children: [
@@ -98,6 +97,7 @@ class Empresa {
   late int ingresoAnual;
 
   //metodo contructor de la clase es el encargado de llenar los parametros o propiedades de la clase
+  //this es opcional en Dart se de otra forma
   Empresa(String nombre, String propietario, int ingreso) {
     this.nombre = nombre;
     this.propietario = propietario;
