@@ -97,7 +97,7 @@ class Empresa {
   late int ingresoAnual;
 
   //metodo contructor de la clase es el encargado de llenar los parametros o propiedades de la clase
-  //this es opcional en Dart se de otra forma
+  //this es opcional en Dart se usa otra forma
   Empresa(String nombre, String propietario, int ingreso) {
     this.nombre = nombre;
     this.propietario = propietario;
