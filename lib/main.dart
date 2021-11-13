@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 //la clase main principal que ejecuta la aplicacion al inciar es
 //en este casso MyApp debe tener la primera letra en mayuscula
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 //con este main estoy indicando que ejecute la aplicacion principal
 
 //con la ayuda del los pluggins  de visutal studio code usamos statlessW o StatefulW
@@ -11,7 +11,7 @@ void main() => runApp(MyApp());
 
 //se crea el primer widget (clase) de la aplicacion
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   //este es un contructor (build) donde se construye el widget y que retorna
   //un widget
